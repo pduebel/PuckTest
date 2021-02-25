@@ -26,7 +26,6 @@
           // so we do it in stages
           Puck.eval("c.totals", function(d,err) {
             elements.total.setValue(d.count);
-            elements.current.setValue(d.current);
             elements.year.setData(d.year);
             elements.week.setData(d.week);
             elements.month.setData(d.month);
@@ -44,7 +43,6 @@
   var elements = {
     heading : TD.label({x:10,y:10,width:190,height:50,label:"Electricity meter"}),
     total : TD.value({x:10,y:70,width:190,height:60,label:"Total Usage",value:0}),
-    current : TD.value({x:10,y:140,width:190,height:60,label:"Current Usage",value:0}),
     bat : TD.gauge({x:10,y:210,width:190,height:220,label:"Battery Level",value:0,min:0,max:100}),
     history : TD.graph({x:210,y:10+160*0,width:400,height:150,label:"96 hr history"}),
     day : TD.graph({x:210,y:10+160*1,width:400,height:150,label:"Day"}),
